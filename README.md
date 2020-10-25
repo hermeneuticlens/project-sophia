@@ -10,7 +10,9 @@ a minimalist, open-platform reference and knowledge manager for humanities
 - other features missing from Zotero/Mendeley etc
   - link chapter entries to book entry (for books with chapters written by differnt authors)
   - open platform, easy for users to move files, edit notes, etc. outside of the app
-  - the option to alert duplicates immediately
+  - alert duplicates immediately
+  - multiple publishers
+  - automatic short titles
 - (stretch goal) implement an importer extension
 
 ## Technology
