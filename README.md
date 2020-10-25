@@ -14,6 +14,6 @@ a minimalist, open-platform reference and knowledge manager for humanities
 - (stretch goal) implement an importer extension
 
 ## Technology
-- App platform: NodeJS, 
+- App platform: NodeJS, TypeScript, Electron
 - Data: Markdown (and MySQL? or something more portable/minimalist).
 - PDF engine, Full-Text search engine: TBD.
