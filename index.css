@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(30, 30, 30);
+    color: rgb(200, 200, 200);
+    font-family: "Segoe UI";
+    font-size: 13px;
+    zoom: 1;
+    box-sizing: border-box;
+}
+
+.menubar {
+    background-color: rgb(45, 45, 45);
+    display: flex;
+    height: 30px;
+    overflow: hidden;
+}
