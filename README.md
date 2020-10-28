@@ -15,11 +15,11 @@ a minimalist, open-platform reference and knowledge manager for humanities
   - automatic short titles
 - (stretch goal) implement an importer extension
 
-## Technology
-- App platform: NodeJS, TypeScript, Electron
-- Data: Markdown (and MySQL? or something more portable/minimalist).
-- PDF engine, Full-Text search engine: TBD.
+## How is my project different from, say, Zotero?
+- Modern, cross-platform, responsible interface thanks to Electron
+- JSON + file storage, instead of the traditional SQL + database storage
 
-# Third Party Software Involved
+# Third party software used
 - Built on Electron. Written in Visual Studio.
 - Icon packs: [vscode-codicons](https://github.com/microsoft/vscode-codicons) and [remixicon](https://github.com/Remix-Design/remixicon)
+- Schemas: [CSL JSON](https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-citation.json)
