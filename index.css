@@ -1,15 +1,45 @@
 body {
-    background-color: rgb(30, 30, 30);
-    color: rgb(200, 200, 200);
+    background-color: #222;
+    color: #ccc;
     font-family: "Segoe UI";
     font-size: 13px;
     zoom: 1;
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    user-select: none;
 }
 
 .menubar {
-    background-color: rgb(45, 45, 45);
+    background-color: #333;
+    color: #aaa;
     display: flex;
     height: 30px;
-    overflow: hidden;
+    line-height: 30px;
+    justify-content: space-between;
+}
+
+.menu_container, .window_sys_control {
+    display: flex;
+}
+
+.menu_item {
+    padding: 0px 8px 0px 8px;
+}
+
+.titlebar_draggable {
+    -webkit-app-region: drag;
+    flex-grow: 1;
+}
+
+.menu_item:hover, [class^="codicon-chrome-"]:hover {
+    background-color: #666;
+    color: #ccc;
+}
+
+[class^="codicon-chrome-"] {
+    font-family: "codicon";
+    font-size: 16px;
+    padding: 0px 16px 0px 16px;
 }

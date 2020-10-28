@@ -19,3 +19,7 @@ a minimalist, open-platform reference and knowledge manager for humanities
 - App platform: NodeJS, TypeScript, Electron
 - Data: Markdown (and MySQL? or something more portable/minimalist).
 - PDF engine, Full-Text search engine: TBD.
+
+# Third Party Software Involved
+- Built on Electron. Written in Visual Studio.
+- Icon packs: [vscode-codicons](https://github.com/microsoft/vscode-codicons) and [remixicon](https://github.com/Remix-Design/remixicon)

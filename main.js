@@ -4,8 +4,10 @@ function createWindow () {
   const window = new BrowserWindow({
     width: 1600,
     height: 1000,
+    frame: false, // https://www.electronjs.org/docs/api/frameless-window
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      enableRemoteModule: true
     }
   })
   window.setMenuBarVisibility(false)
@@ -28,7 +30,3 @@ app.on('activate', () => {
 })
 
 // -----------------------------------------------
-
-ipcMain.on("toggle_dev_tools", e => {
-  e.sender.webContents.toggleDevTools()
-})

@@ -5,18 +5,24 @@
     <title>Hello World!</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 
+    <link rel="stylesheet" href="fonts/remixicon/remixicon.css">
+    <link rel="stylesheet" href="fonts/codicon/codicon.css">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="titlebar">
         <div class="menubar">
-            <div class="menu">
-                <div>First</div>
-                <div id="menubar_itmm_toggle_dev">Toggle Dev</div>
-                <div>Third</div>
+            <div class="menu_container">
+                <div class="menu_item">First</div>
+                <div class="menu_item" id="menubar_itmm_toggle_dev">Toggle Dev</div>
+                <div class="menu_item">Third</div>
+            </div>
+            <div class="titlebar_draggable">
             </div>
             <div class="window_sys_control">
-                
+                <div class="codicon-chrome-minimize"></div>
+                <div class="codicon-chrome-maximize"></div>
+                <div class="codicon-chrome-close"></div>
             </div>
         </div>
     </div>
