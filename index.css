@@ -1,6 +1,6 @@
-body {
-    background-color: #222;
+body {    
     color: #ccc;
+    background-color: #222;
     font-family: "Segoe UI";
     font-size: 13px;
     zoom: 1;
@@ -11,8 +11,10 @@ body {
     user-select: none;
 }
 
+/*---------------------------titlebar ------------------------*/
+
 .menubar {
-    background-color: #333;
+    background-color: #444;
     color: #aaa;
     display: flex;
     height: 30px;
@@ -44,28 +46,60 @@ body {
     padding: 0px 16px 0px 16px;
 }
 
+
+/* ---------------------------panels -----------------------*/
 .main_view {
     display: flex;
     justify-content: space-between;
+    border-width: 0px 2px 2px 2px;
+    border-color: #444;
+    border-style: solid;
+    height: calc(100vh - 35px);
 }
 
 .panel_center {
     flex-grow: 1;
+    flex-shrink: 1;
     margin: 10px;
+    overflow: hidden;
+    min-width: 400px;;
 }
 
 .panel_left, .panel_right {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.panel_left {
+    width: 10px;
+}
+
+
+.panel_right {
     width: 400px;
 }
+
+
+/* --------------------- main list --------------------------*/
 
 .main_list {
     display: flex;
     flex-direction: column;
+    height: calc(100% - 30px);
+}
+
+.header_row {
+    padding-right: 8px;
 }
 
 .main_list_row {
-    padding: 6px;
+    height: 30px;
+    line-height: 30px;
     display: flex;
+}
+
+.main_list_row:hover {
+    background: #444;
 }
 
 .main_list_row > div {
@@ -74,8 +108,29 @@ body {
     text-overflow: ellipsis;
 }
 
-.header_row {
-    background-color: #333
+.even_row {
+    background-color: #282828;
+}
+
+.main_list_col_0 {
+    width: 40%;
+}
+
+.main_list_col_1 {
+    width: 20%;
+}
+
+.main_list_col_2 {
+    width: 10%
+}
+
+.main_list_col_3 {
+    width: 30%
+}
+
+[class^="main_list_col_"] {
+    padding-left: 6px;
+    padding-right: 12px;
 }
 
 /* scroll enabled - https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
@@ -83,7 +138,6 @@ body {
 .scroll_enabled {
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 1000px;
 }
 
 .scroll_enabled::-webkit-scrollbar {
