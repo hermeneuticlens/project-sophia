@@ -1,6 +1,10 @@
 const { ipcRenderer, remote } = require("electron")
 const win = remote.getCurrentWindow()
 
+$(() => {
+    console.log("sent")
+})
+
 // Window
 
 $("#menubar_itmm_toggle_dev").on("click", () =>
