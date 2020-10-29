@@ -18,7 +18,7 @@ a minimalist, open-platform reference and knowledge manager for humanities
 ## How is my project different from, say, Zotero?
 - Modern, cross-platform, responsible interface thanks to Electron
 - JSON + file storage, instead of the traditional SQL + database storage
-- An global citation picker for inserting citations wherever you write.
+- A global citation picker for inserting citations wherever you write.
   - Search quickly, automatically sent to clipboard for pasting
   - Can be set to always-on-top
   - Because citations are based on BibTex citation keys, users can use whatever tools available that convert keys to citations in their writing apps of choice (e.g. Microsoft Word).
