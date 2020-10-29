@@ -18,8 +18,12 @@ a minimalist, open-platform reference and knowledge manager for humanities
 ## How is my project different from, say, Zotero?
 - Modern, cross-platform, responsible interface thanks to Electron
 - JSON + file storage, instead of the traditional SQL + database storage
+- An global citation picker for inserting citations wherever you write.
+  - Search quickly, automatically sent to clipboard for pasting
+  - Can be set to always-on-top
+  - Because citations are based on BibTex citation keys, users can use whatever tools available that convert keys to citations in their writing apps of choice (e.g. Microsoft Word).
 
 # Third party software used
 - Built on Electron. Written in Visual Studio.
 - Icon packs: [vscode-codicons](https://github.com/microsoft/vscode-codicons) and [remixicon](https://github.com/Remix-Design/remixicon)
-- Schemas: [CSL JSON](https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-citation.json)
+- Schemas: [CSL JSON](https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-citation.json), [BetterBibTex citekey](https://retorque.re/zotero-better-bibtex/citing/)

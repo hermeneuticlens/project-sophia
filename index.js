@@ -2,7 +2,7 @@ const { ipcRenderer, remote } = require("electron")
 const win = remote.getCurrentWindow()
 
 $(() => {
-    console.log("sent")
+    ipcRenderer.send("app:dom_ready")
 })
 
 // Window
