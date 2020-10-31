@@ -15,7 +15,7 @@ body {
 
 
 .menubar {
-    background-image: linear-gradient(to right, #333 40%, #555 50%, #333 60%);
+    background-image: linear-gradient(to right, #333 40%, #666 50%, #333 60%);
     background-size: 250% 100%; /* css trick https://www.scottcole.net/animating-linear-gradient-button-links/ */
     color: #aaa;
     display: flex;
@@ -62,7 +62,7 @@ body {
 [class^="codicon-chrome-"] {
     font-family: "codicon";
     font-size: 16px;
-    padding: 0px 16px 0px 16px;
+    padding: 1px 16px 0px 16px;
 }
 
 
@@ -90,7 +90,7 @@ body {
 }
 
 .panel_left {
-    width: 10px;
+    width: 300px;
 }
 
 .panel_right {
@@ -137,15 +137,15 @@ body {
 }
 
 .main_list_col_1 {
-    width: 20%;
+    width: 15%;
 }
 
 .main_list_col_2 {
-    width: 10%
+    width: 8%
 }
 
 .main_list_col_3 {
-    width: 30%
+    width: 37%
 }
 
 [class^="main_list_col_"] {

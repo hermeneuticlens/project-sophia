@@ -3,8 +3,10 @@ import { Window } from "./window.js"
 
 export class Utilities {
     static loading_counter = 0
+    static is_block_sending = false
 
     static ipc_send(...args) {
+        if(this.is_block_sending) return
         this.loading_counter ++
         if(this.loading_counter == 1)
             Window.start_loading_animation()

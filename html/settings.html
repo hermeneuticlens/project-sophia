@@ -1,0 +1,38 @@
+<div class="settings_panel">
+    <div class="settings_container">
+        <h1>Settings</h1> 
+        <section name="General" class="settings_section">
+            <div>Settings 1: <input></div>
+            <div>Settings 2: <input></div>
+            <div>Settings 3: <input></div>
+        </section>
+        <sections name="Test2" class="settings_section">
+
+        </sections>
+    </div>
+<style>
+.settings_panel {
+    position: absolute;
+    top: 30px;
+    z-index: 100;
+    width: 100vw;
+    height: calc(100vh - 30px);
+    background-color: rgba(0, 0, 0, 20%);
+    backdrop-filter:blur(6px);
+    display: flex;
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    justify-content: center;
+    align-items: center;
+}
+
+.settings_container {
+    width: 600px;
+    height: 70%;
+    background-color: #222;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px 40px 40px;
+    border-radius: 10px;
+}
+</style>
+<script type="module" src="../js/settings.js"></script>
+</div>

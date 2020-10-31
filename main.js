@@ -15,8 +15,7 @@ function createWindow () {
       enableRemoteModule: true
     }
   })
-  win.loadFile('./index.html')
-  win.webContents.toggleDevTools()
+  win.loadFile('html/index.html')
 }
 
 app.whenReady().then(createWindow)
@@ -84,4 +83,12 @@ ipcMain.on("item_panel:update", (e, selected_id) => {
     e.reply("item_panel:update:success", selected_id)
   }
   is_slow_loading = !is_slow_loading
+})
+
+
+// ------------------------ settings ---------------------------------
+
+ipcMain.on("settings:render", (e) => {
+  e.reply("settings:render:complete", 
+    fs.readFileSync(`${__dirname}/html/settings.html`, {encoding: "utf8", flag: "r"}))
 })
