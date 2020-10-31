@@ -15,7 +15,8 @@ function createWindow () {
       enableRemoteModule: true
     }
   })
-  win.loadFile('index.html')
+  win.loadFile('./index.html')
+  win.webContents.toggleDevTools()
 }
 
 app.whenReady().then(createWindow)
@@ -34,7 +35,7 @@ app.on('activate', () => {
 
 ipcMain.on("app:dom_ready", (e) => {
   const params = ["Title", "Author", "Year", "Publication"]
-  fs.readFile("test_data.json", (err, data) => {
+  fs.readFile("./test_data.json", (err, data) => {
     let result = []
     let data_json = JSON.parse(data)
     
@@ -68,7 +69,19 @@ ipcMain.on("app:dom_ready", (e) => {
   })
 })
 
+let is_slow_loading = false
+
 ipcMain.on("item_panel:update", (e, selected_id) => {
   params = ["Item Type", "Title", ""]
-  e.reply("item_panel:update:success", selected_id)
+
+  if (is_slow_loading) {// simulate slow loading 
+    console.log("slow loading")
+    setTimeout( () => {  
+      e.reply("item_panel:update:success", selected_id)
+    }, 2000)
+  } else {
+    console.log("regular loading")
+    e.reply("item_panel:update:success", selected_id)
+  }
+  is_slow_loading = !is_slow_loading
 })

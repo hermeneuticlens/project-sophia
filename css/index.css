@@ -13,13 +13,27 @@ body {
 
 /*---------------------------titlebar ------------------------*/
 
+
 .menubar {
-    background-color: #444;
+    background-image: linear-gradient(to right, #333 40%, #555 50%, #333 60%);
+    background-size: 250% 100%; /* css trick https://www.scottcole.net/animating-linear-gradient-button-links/ */
     color: #aaa;
     display: flex;
     height: 30px;
     line-height: 30px;
     justify-content: space-between;
+}
+
+.menubar_loading {
+    animation-name: menubar_loading_animation;
+    animation-delay: 0.2s;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes menubar_loading_animation {
+    0% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 .menu_container, .window_sys_control {
@@ -35,9 +49,14 @@ body {
     flex-grow: 1;
 }
 
+.menu_item, [class^="codicon-chrome-"] {
+    transition: background-color 0.2s, color 0.2s;
+}
+
 .menu_item:hover, [class^="codicon-chrome-"]:hover {
-    background-color: #666;
+    background-color: #555;
     color: #ccc;
+    transition: background-color 0.1s, color 0.1s;
 }
 
 [class^="codicon-chrome-"] {
@@ -52,7 +71,7 @@ body {
     display: flex;
     justify-content: space-between;
     border-width: 0px 2px 2px 2px;
-    border-color: #444;
+    border-color: #333;
     border-style: solid;
     height: calc(100vh - 35px);
 }
@@ -73,7 +92,6 @@ body {
 .panel_left {
     width: 10px;
 }
-
 
 .panel_right {
     width: 400px;
@@ -96,10 +114,12 @@ body {
     height: 30px;
     line-height: 30px;
     display: flex;
+    transition: background-color 0.2s;
 }
 
 .main_list_row:hover {
-    background: #444;
+    background-color: #444;
+    transition: background-color 0.1s;
 }
 
 .main_list_row > div {
