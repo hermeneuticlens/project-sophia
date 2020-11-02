@@ -2,7 +2,7 @@
   "name": "project-sophia",
   "version": "1.0.0",
   "description": "a minimalist, open-platform reference and knowledge manager for humanities",
-  "main": "main.js",
+  "main": "./main/main.js",
   "scripts": {
     "start": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",

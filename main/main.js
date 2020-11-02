@@ -90,5 +90,5 @@ ipcMain.on("item_panel:update", (e, selected_id) => {
 
 ipcMain.on("settings:render", (e) => {
   e.reply("settings:render:complete", 
-    fs.readFileSync(`${__dirname}/html/settings.html`, {encoding: "utf8", flag: "r"}))
+    fs.readFileSync(`./html/settings.html`, {encoding: "utf8", flag: "r"}))
 })
